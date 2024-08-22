@@ -15,6 +15,8 @@ public static void main(String[] args) {
     LogParser logParser = new LogParser();
     OperationCounter operationCounter = new OperationCounter();
     UniqueOperationCounter uniqueOperationCounter = new UniqueOperationCounter();
+    OperationCounterByHour operationCounterByHour = new OperationCounterByHour();
+    UniqueOperationCounterByHour uniqueOperationCounterByHour = new UniqueOperationCounterByHour();
 
     // Запуск каждого из вариантов
 //    System.out.println("=== Лог по дням ===");
@@ -23,8 +25,13 @@ public static void main(String[] args) {
 //    System.out.println("\n=== Количество операций в день ===");
 //    operationCounter.countOperations(logLines);
 
-    System.out.println("\n=== Уникальные операции по дням ===");
-    uniqueOperationCounter.countUniqueOperations(logLines);
+//    System.out.println("\n=== Уникальные операции по дням ===");
+//    uniqueOperationCounter.countUniqueOperations(logLines);
+
+    System.out.println("\n=== Количество операций в день по часам ===");
+//    operationCounterByHour.countOperationsByHour(logLines);
+    uniqueOperationCounterByHour.countUniqueOperationsByHour(logLines);
+
 }
 
     private static List<String> readLogFile(String filePath) {
